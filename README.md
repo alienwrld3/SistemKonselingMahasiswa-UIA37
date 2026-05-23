@@ -1,2 +1,3 @@
-# fe-37-uia
-Frontend project Upin Ipin Apin tema 37 "Sistem Konseling Mahasiswa"
+# Sistem Konseling Mahasiswa
+Project Kelompok Upin Ipin Apin tema 37 "Sistem Konseling Mahasiswa"
+Praktikum Teknologi Cloud Computing
