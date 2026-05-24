@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport"
+content="width=device-width, initial-scale=1.0">
+
+<title>Jadwal Konseling</title>
+
+<link rel="stylesheet"
+href="css/style.css">
+
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"/>
+
+</head>
+
+<body>
+
+<!-- SIDEBAR -->
+
+<div class="sidebar">
+
+    <div class="logo-area">
+
+        <div class="logo-box">
+
+            <i class="fa-solid fa-brain"></i>
+
+        </div>
+
+        <div>
+
+            <h2>
+                Konseling+
+            </h2>
+
+            <p>
+                Dashboard Psikolog
+            </p>
+
+        </div>
+
+    </div>
+
+    <!-- PROFILE -->
+
+    <div class="profile-card">
+
+        <img
+        src="https://i.pravatar.cc/150?img=12"
+        class="profile-img">
+
+        <h3 id="doctorName">
+            Psikolog
+        </h3>
+
+        <span>
+            Clinical Psychologist
+        </span>
+
+        <div class="online-status">
+
+            <div class="dot"></div>
+
+            Online
+
+        </div>
+
+    </div>
+
+    <!-- MENU -->
+
+    <div class="menu">
+
+        <a href="dashboard-admin.html">
+
+            <i class="fa-solid fa-chart-line"></i>
+
+            Dashboard
+
+        </a>
+
+        <a
+        href="jadwal.html"
+        class="active">
+
+            <i class="fa-solid fa-calendar"></i>
+
+            Jadwal Saya
+
+        </a>
+
+        <a href="booking.html">
+
+            <i class="fa-solid fa-users"></i>
+
+            Antrean Konseling
+
+        </a>
+
+        <a href="chat.html">
+
+            <i class="fa-solid fa-comments"></i>
+
+            Chat Konseling
+
+        </a>
+
+        <a href="laporan.html">
+
+            <i class="fa-solid fa-notes-medical"></i>
+
+            Laporan Sesi
+
+        </a>
+
+        <a href="profile.html">
+
+            <i class="fa-solid fa-user-doctor"></i>
+
+            Profile Saya
+
+        </a>
+
+        <a
+        href="#"
+        onclick="logout()">
+
+            <i class="fa-solid fa-right-from-bracket"></i>
+
+            Logout
+
+        </a>
+
+    </div>
+
+</div>
+
+<!-- MAIN -->
+
+<div class="main">
+
+    <!-- TOPBAR -->
+
+    <div class="topbar">
+
+        <div>
+
+            <h1>
+                Jadwal Konseling
+            </h1>
+
+            <p>
+                Kelola jadwal sesi konseling psikolog
+            </p>
+
+        </div>
+
+    </div>
+
+    <!-- FORM -->
+
+    <div class="section">
+
+        <div class="section-header">
+
+            <h2>
+                Tambah Jadwal
+            </h2>
+
+            <p>
+                Tambahkan jadwal konsultasi baru
+            </p>
+
+        </div>
+
+        <!-- TANGGAL -->
+
+        <div class="input-group">
+
+            <label>
+                Tanggal
+            </label>
+
+            <input
+            type="date"
+            id="tanggal">
+
+        </div>
+
+        <!-- JAM MULAI -->
+
+        <div class="input-group">
+
+            <label>
+                Jam Mulai
+            </label>
+
+            <input
+            type="time"
+            id="jam_mulai">
+
+        </div>
+
+        <!-- JAM SELESAI -->
+
+        <div class="input-group">
+
+            <label>
+                Jam Selesai
+            </label>
+
+            <input
+            type="time"
+            id="jam_selesai">
+
+        </div>
+
+        <!-- BUTTON -->
+
+        <button
+        class="btn-primary"
+        onclick="tambahJadwal()">
+
+            Simpan Jadwal
+
+        </button>
+
+    </div>
+
+    <!-- TABLE -->
+
+    <div class="section">
+
+        <div class="section-header">
+
+            <h2>
+                Jadwal Saya
+            </h2>
+
+            <p>
+                List jadwal konseling aktif
+            </p>
+
+        </div>
+
+        <table class="table">
+
+            <thead>
+
+                <tr>
+
+                    <th>
+                        Tanggal
+                    </th>
+
+                    <th>
+                        Jam
+                    </th>
+
+                    <th>
+                        Status
+                    </th>
+
+                    <th>
+                        Aksi
+                    </th>
+
+                </tr>
+
+            </thead>
+
+            <tbody id="jadwalTable">
+
+            </tbody>
+
+        </table>
+
+    </div>
+
+</div>
+
+<script src="js/auth.js"></script>
+<script src="js/jadwal.js"></script>
+
+</body>
+</html>

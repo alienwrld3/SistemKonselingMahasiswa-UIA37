@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport"
+content="width=device-width, initial-scale=1.0">
+
+<title>Antrean Konseling</title>
+
+<link rel="stylesheet"
+href="css/style.css">
+
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"/>
+
+</head>
+
+<body>
+
+<!-- SIDEBAR -->
+
+<div class="sidebar">
+
+    <div class="logo-area">
+
+        <div class="logo-box">
+
+            <i class="fa-solid fa-brain"></i>
+
+        </div>
+
+        <div>
+
+            <h2>
+                Konseling+
+            </h2>
+
+            <p>
+                Dashboard Psikolog
+            </p>
+
+        </div>
+
+    </div>
+
+    <!-- PROFILE -->
+
+    <div class="profile-card">
+
+        <img
+        src="https://i.pravatar.cc/150?img=12"
+        class="profile-img">
+
+        <h3 id="doctorName">
+            Psikolog
+        </h3>
+
+        <span>
+            Clinical Psychologist
+        </span>
+
+        <div class="online-status">
+
+            <div class="dot"></div>
+
+            Online
+
+        </div>
+
+    </div>
+
+    <!-- MENU -->
+
+    <div class="menu">
+
+        <a href="dashboard-admin.html">
+
+            <i class="fa-solid fa-chart-line"></i>
+
+            Dashboard
+
+        </a>
+
+        <a href="jadwal.html">
+
+            <i class="fa-solid fa-calendar"></i>
+
+            Jadwal Saya
+
+        </a>
+
+        <a
+        href="booking.html"
+        class="active">
+
+            <i class="fa-solid fa-users"></i>
+
+            Antrean Konseling
+
+        </a>
+
+        <a href="chat.html">
+
+            <i class="fa-solid fa-comments"></i>
+
+            Chat Konseling
+
+        </a>
+
+        <a href="laporan.html">
+
+            <i class="fa-solid fa-notes-medical"></i>
+
+            Laporan Sesi
+
+        </a>
+
+
+       
+
+
+        <a
+        href="#"
+        onclick="logout()">
+
+            <i class="fa-solid fa-right-from-bracket"></i>
+
+            Logout
+
+        </a>
+
+    </div>
+
+</div>
+
+<!-- MAIN -->
+
+<div class="main">
+
+    <!-- TOPBAR -->
+
+    <div class="topbar">
+
+        <div>
+
+            <h1>
+                Antrean Konseling
+            </h1>
+
+            <p>
+                Mahasiswa yang telah booking sesi
+            </p>
+
+        </div>
+
+    </div>
+
+    <!-- TABLE -->
+
+    <div class="section">
+
+        <div class="section-header">
+
+            <h2>
+                Daftar Booking
+            </h2>
+
+            <p>
+                List mahasiswa konseling
+            </p>
+
+        </div>
+
+        <table class="table">
+
+            <thead>
+                
+
+                <tr>
+
+                    <th>
+                        ID Booking
+                    </th>
+
+                    <th>
+                        Mahasiswa
+                    </th>
+
+                    <th>
+                        Keluhan
+                    </th>
+
+                    <th>
+                        Status
+                    </th>
+
+                    <th>
+                        Aksi
+                    </th>
+
+                </tr>
+
+            </thead>
+
+            <tbody id="bookingTable"></tbody>
+
+        </table>
+
+    </div>
+
+</div>
+
+<script src="js/auth.js"></script>
+<script src="js/booking.js"></script>
+
+</body>
+</html>

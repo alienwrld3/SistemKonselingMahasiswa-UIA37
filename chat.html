@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport"
+content="width=device-width, initial-scale=1.0">
+
+<title>Chat Konseling</title>
+
+<link rel="stylesheet"
+href="css/style.css">
+
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"/>
+
+</head>
+
+<body>
+
+<div class="sidebar">
+
+    <div class="logo-area">
+
+        <div class="logo-box">
+
+            <i class="fa-solid fa-brain"></i>
+
+        </div>
+
+        <div>
+
+            <h2>
+                Konseling+
+            </h2>
+
+            <p>
+                Dashboard Psikolog
+            </p>
+
+        </div>
+
+    </div>
+
+    <div class="profile-card">
+
+        <img
+        src="https://i.pravatar.cc/150?img=12"
+        class="profile-img">
+
+        <h3 id="doctorName">
+            Psikolog
+        </h3>
+
+        <span>
+            Clinical Psychologist
+        </span>
+
+        <div class="online-status">
+
+            <div class="dot"></div>
+
+            Online
+
+        </div>
+
+    </div>
+
+    <div class="menu">
+
+        <a href="dashboard-admin.html">
+
+            <i class="fa-solid fa-chart-line"></i>
+
+            Dashboard
+
+        </a>
+
+        <a href="jadwal.html">
+
+            <i class="fa-solid fa-calendar"></i>
+
+            Jadwal Saya
+
+        </a>
+
+        <a href="booking.html">
+
+            <i class="fa-solid fa-users"></i>
+
+            Antrean Konseling
+
+        </a>
+
+        <a
+        href="chat.html"
+        class="active">
+
+            <i class="fa-solid fa-comments"></i>
+
+            Chat Konseling
+
+        </a>
+
+        <a href="laporan.html">
+
+            <i class="fa-solid fa-notes-medical"></i>
+
+            Laporan Sesi
+
+        </a>
+        
+        <a href="profile.html">
+
+            <i class="fa-solid fa-user-doctor"></i>
+
+            Profile Saya
+
+        </a>
+
+        <a
+        href="#"
+        onclick="logout()">
+
+            <i class="fa-solid fa-right-from-bracket"></i>
+
+            Logout
+
+        </a>
+
+    </div>
+
+</div>
+
+<div class="main">
+
+    <div class="topbar">
+
+        <div>
+
+            <h1>
+                Chat Konseling
+            </h1>
+
+            <p>
+                Konseling realtime dengan mahasiswa
+            </p>
+
+        </div>
+
+    </div>
+
+    <div class="chat-layout">
+
+        <div class="chat-users">
+
+            <div class="section-header">
+
+                <h2>
+                    Mahasiswa Aktif
+                </h2>
+
+                <p>
+                    Sesi saat ini
+                </p>
+
+            </div>
+
+            <div
+            class="chat-user"
+            id="activeStudent"
+            style="background: linear-gradient(135deg, #2563eb, #4f46e5); color: white; cursor: default;">
+
+                <i class="fa-solid fa-circle-notch fa-spin"></i> Memuat...
+
+            </div>
+
+        </div>
+
+        <div class="chat-box">
+            <div class="section-header">
+                <h2>Sesi Konseling</h2>
+                <button onclick="akhiriSesi()" class="btn-primary" style="background-color: #ef4444; border: none; cursor: pointer;">
+            Akhiri Sesi
+                </button>
+            </div>
+
+            <div
+            class="messages"
+            id="messages">
+
+            </div>
+
+            <div class="chat-input">
+
+                <input
+                type="text"
+                id="messageInput"
+                placeholder="Ketik pesan...">
+
+                <button
+                class="btn-primary"
+                onclick="sendMessage()">
+
+                    Kirim
+
+                </button>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+<script src="https://cdn.socket.io/4.7.2/socket.io.min.js"></script>
+<script src="js/auth.js"></script>
+<script src="js/chat.js"></script>
+
+</body>
+</html>
