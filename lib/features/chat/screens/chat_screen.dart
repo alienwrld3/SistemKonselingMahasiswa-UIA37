@@ -72,7 +72,7 @@ class _ChatScreenState extends State<ChatScreen> {
 
   // 3. Fungsi untuk menghubungkan Flutter ke Node.js via WebSocket
   void _initSocket() {
-    String socketUrl = 'http://192.168.100.76:3000'; // Sesuaikan IP laptopmu
+    String socketUrl = 'https://be-mobile-service-203664327381.asia-southeast2.run.app'; // Sesuaikan IP laptopmu
     socket = IO.io(
       socketUrl,
       IO.OptionBuilder()
